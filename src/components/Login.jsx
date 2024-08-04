@@ -27,7 +27,7 @@ function Login() {
    const submit = async (e) => {
      e.preventDefault();
      try {
-        const res = await axios.post(`https://todoback-three.vercel.app/api/v1/login`, inputs);
+        const res = await axios.post(`https://todobackend-nu.vercel.app/api/v1/login`, inputs);
 
         if(res.data.message === "No Such Account Found!" || res.data.message === "Password is incorrect!"){
           toast.error(res.data.message);

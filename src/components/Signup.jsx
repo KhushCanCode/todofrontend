@@ -26,7 +26,7 @@ function Signup() {
    const submit = async (e) => {
      e.preventDefault();
      try {
-        const res = await axios.post(`https://todoback-three.vercel.app/api/v1/signup`, inputs);
+        const res = await axios.post(`https://todobackend-nu.vercel.app/api/v1/signup`, inputs);
         if(res.data.message === "User already exists!"){
           toast.error(res.data.message);
         }

@@ -28,7 +28,7 @@ function Todo() {
     } else {
       if (id) {
         try {
-          await axios.post(`https://todoback-three.vercel.app/api/v2/addTask`, {
+          await axios.post(`https://todobackend-nu.vercel.app/api/v2/addTask`, {
             title: inputs.title,
             body: inputs.body,
             id: id,
@@ -54,7 +54,7 @@ function Todo() {
     if (id) {
       try {
         await axios.put(
-          `https://todoback-three.vercel.app/api/v2/updateTask/${taskId}`,
+          `https://todobackend-nu.vercel.app/api/v2/updateTask/${taskId}`,
           updatedTask
         );
         fetchTasks();
@@ -73,7 +73,7 @@ function Todo() {
     if (id) {
       try {
         await axios.put(
-          `https://todoback-three.vercel.app/api/v2/updateStatus/${taskId}`,
+          `https://todobackend-nu.vercel.app/api/v2/updateStatus/${taskId}`,
           updatedStatus
         );
         fetchTasks();
@@ -92,7 +92,7 @@ function Todo() {
     if (id) {
       try {
         await axios.delete(
-          `https://todoback-three.vercel.app/api/v2/deleteTask/${taskId}`,
+          `https://todobackend-nu.vercel.app/api/v2/deleteTask/${taskId}`,
           { data: { id: id } }
         );
         fetchTasks();
@@ -113,7 +113,7 @@ function Todo() {
     if (id) {
       try {
         await axios
-          .get(`https://todoback-three.vercel.app/api/v2/getTask/${id}`)
+          .get(`https://todobackend-nu.vercel.app/api/v2/getTask/${id}`)
           .then((res) => {
             setArray(res.data.list);
           });
